@@ -1,0 +1,451 @@
+body {
+  background: linear-gradient(to top, #33CCFF 0%, #D3D3D3 103%);
+}
+
+a {
+  color: #ffffff;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+p {
+  color: black;
+}
+
+.p-text {
+  color: #ffffff;
+  font-size: 20px;
+}
+
+
+.headshot-image {
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
+  vertical-align: middle;
+  text-align: center;
+  margin: 50px 0px 0px 50px;
+  transition: all .2s ease-in-out;
+}
+
+.headshot-image:hover {
+  transform:  scale(1.2);
+}
+
+.nav-pills {
+  font-size: 18px;
+  color: #ffffff;
+  margin: 20px 60px 0px 0px;
+}
+
+.col-xs-6 {
+  vertical-align: middle;
+}
+
+.me {
+  height: 400px;
+}
+
+.header-text {
+  color: white;
+  margin-top: 100px;
+  vertical-align: middle;
+  width: 30%;
+}
+
+.section-title {
+  text-align: center;
+  color: #ffffff;
+  padding-bottom: 20px;
+}
+
+.h1-name {
+  padding-bottom: 10px;
+  border-bottom: 2px solid;
+}
+
+
+.about {
+  height: 400px;
+}
+
+.about-text {
+  font-size: 22px;
+  color: #ffffff;
+  padding: 5px 0px 0px 0px;
+}
+
+.portfolio-title {
+  color: #ffffff;
+}
+
+.thumbnail {
+  width: 100%;
+  border: 0;
+  box-shadow: none;
+  background: transparent;
+  transition: all .2s ease-in-out;
+}
+
+.thumbnail:hover {
+  transform:  scale(1.2);
+}
+
+#n, #e, #m {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+#mybtn {
+ color:white;
+ background-color: green;
+}
+
+.footer {
+  padding: 40px 0px 15px 0px;
+  color: #ffffff;
+}
+
+.social-media {
+  border-radius: 50%;
+  margin-left: 3px;
+}
+
+.fa-linkedin {
+  color: black;
+  font-size: 1.8em;
+}
+
+.linkedin {
+  transition: .7s ease;
+}
+
+.linkedin:hover {
+  cursor: pointer;
+  background-color: #d3d3d3;
+}
+
+.fa-github {
+  color: black;
+  font-size: 1.8em;
+}
+
+.fa-github:hover {
+  color: black;
+}
+
+.github {
+  transition: .7s ease;
+}
+
+.github:hover {
+  cursor: pointer;
+  background-color: #d3d3d3;
+}
+
+@media (max-width: 720px) {
+
+  .headshot-image {
+    height: 250px;
+    width: 250px;
+  }
+
+  .h1-name {
+    font-size: 24px;
+  }
+
+  .h2-name {
+    font-size: 22px;
+  }
+
+  .about {
+    height: 450px;
+  }
+
+}
+
+@media (max-width: 620px) {
+
+  .headshot-image {
+    height: 200px;
+    width: 200px;
+  }
+
+  .h1-name {
+    font-size: 20px;
+  }
+
+  .h2-name {
+    font-size: 18px;
+  }
+
+  .me {
+    height: 300px;
+  }
+
+  .about {
+    height: 500px;
+  }
+
+}
+
+@media (max-width: 516px) {
+
+  .headshot-image {
+    height: 200px;
+    width: 200px;
+  }
+
+  .header-text {
+    margin-top: 75px;
+  }
+
+  .h1-name {
+    font-size: 20px;
+  }
+
+  .h2-name {
+    font-size: 18px;
+  }
+
+  .about {
+    height: 550px;
+  }
+
+}
+
+@media (max-width: 506px) {
+
+  .headshot-image {
+    height: 190px;
+    width: 190px;
+  }
+
+  .header-text {
+    margin-top: 75px;
+  }
+
+  .h1-name {
+    font-size: 20px;
+  }
+
+  .h2-name {
+    font-size: 18px;
+  }
+
+  .about {
+    height: 560px;
+  }
+
+}
+
+@media (max-width: 486px) {
+
+  .headshot-image {
+    height: 180px;
+    width: 180px;
+  }
+
+  .header-text {
+    margin-top: 75px;
+  }
+
+  .h1-name {
+    font-size: 20px;
+  }
+
+  .h2-name {
+    font-size: 18px;
+  }
+
+  .about {
+    height: 550px;
+  }
+
+}
+
+@media (max-width: 460px) {
+
+  .headshot-image {
+    height: 175px;
+    width: 175px;
+  }
+
+  .header-text {
+    margin-top: 60px;
+  }
+
+  .h1-name {
+    font-size: 20px;
+  }
+
+  .h2-name {
+    font-size: 18px;
+  }
+
+  .about {
+    height: 600px;
+  }
+
+}
+
+@media (max-width: 450px) {
+
+  .headshot-image {
+    height: 165px;
+    width: 165px;
+  }
+
+  .header-text {
+    margin-top: 65px;
+  }
+
+  .h1-name {
+    font-size: 20px;
+  }
+
+  .h2-name {
+    font-size: 18px;
+  }
+
+  .about {
+    height: 580px;
+  }
+
+  .about-text {
+    font-size: 20px;
+  }
+
+}
+
+@media (max-width: 436px) {
+
+  .headshot-image {
+    height: 155px;
+    width: 155px;
+  }
+
+  .header-text {
+    margin-top: 60px;
+  }
+
+  .h1-name {
+    font-size: 20px;
+  }
+
+  .h2-name {
+    font-size: 18px;
+  }
+
+  .about {
+    height: 580px;
+  }
+
+  .about-text {
+    font-size: 20px;
+  }
+
+  .me {
+    height: 275px;
+  }
+
+}
+
+@media (max-width: 410px) {
+
+  .headshot-image {
+    height: 145px;
+    width: 145px;
+  }
+
+  .header-text {
+    margin-top: 50px;
+  }
+
+  .h1-name {
+    font-size: 20px;
+  }
+
+  .h2-name {
+    font-size: 18px;
+  }
+
+  .about {
+    height: 580px;
+  }
+
+  .about-text {
+    font-size: 20px;
+  }
+
+  .me {
+    height: 250px;
+  }
+
+}
+
+@media (max-width: 400px) {
+
+  .headshot-image {
+    height: 135px;
+    width: 135px;
+  }
+
+  .header-text {
+    margin-top: 45px;
+  }
+
+  .h1-name {
+    font-size: 18px;
+  }
+
+  .h2-name {
+    font-size: 16px;
+  }
+
+  .about {
+    height: 620px;
+  }
+
+  .about-text {
+    font-size: 20px;
+  }
+
+}
+
+@media (max-width: 375px) {
+
+  .headshot-image {
+    height: 125px;
+    width: 125px;
+  }
+
+  .header-text {
+    margin-top: 45px;
+  }
+
+  .h1-name {
+    font-size: 18px;
+  }
+
+  .h2-name {
+    font-size: 16px;
+  }
+
+  .about {
+    height: 650px;
+  }
+
+  .about-text {
+    font-size: 18px;
+  }
+
+}

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Luke Ramsay | Full Stack Developer</title>
+  <link rel="icon" href="images/VIXX_LR_logo.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script>
+    function _(id) {
+      return document.getElementById(id);
+    }
+    function submitForm() {
+      _("mybtn").disabled = true;
+      _("status").innerHTML = 'please wait ...';
+      var formdata = new FormData();
+      formdata.append("n", _("n").value);
+      formdata.append("e", _("e").value);
+      formdata.append("m", _("m").value);
+
+      var ajax = new XMLHttpRequest();
+      ajax.open("POST", "parser.php");
+      ajax.onreadystatechange = function () {
+
+        if (ajax.readyState == 4 && ajax.status == 200) {
+          if (ajax.responseText == "success") {
+            _("my_form").innerHTML = '<h2>Thanks ' + _("n").value + ', your message has been sent.</h2>';
+          } else {
+            _("status").innerHTML = ajax.responseText;
+            _("mybtn").disabled = false;
+          }
+        }
+      }
+      ajax.send(formdata);
+    }
+  </script>
+</head>
+
+<body>
+  <div class="header">
+    <ul class="nav nav-pills">
+      <li class="pull-right"><a href="#p4">Contact</a></li>
+      <li class="pull-right"><a href="#p3">Portfolio</a></li>
+      <li class="pull-right"><a href="#p2">About</a></li>
+    </ul>
+  </div>
+
+  <div class="container me" id="p1">
+    <div class="row">
+      <div class="col-xs-6">
+        <img src="images/headshot.jpeg" alt="Luke Ramsay" class="headshot-image">
+      </div>
+      <div class="col-xs-6 header-text">
+        <h1 class="h1-name">Luke Ramsay</h1>
+        <h2 class="h2-name">Full Stack Developer</h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="about container" id="p2">
+    <h1 class="section-title">About</h1>
+    <div class="row">
+      <div class="col-lg-12">
+        <p class="p-text">Hey there, my name is Luke Ramsay and I am a Software Developer with a burning desire to
+          create web and mobile applications. My favourite language to work with is Javascript as I find simplicity in
+          its related frameworks and technologies. Although I prefer the front-end side of development, I consider
+          myself a fullstack developer as I am comfortable integrating various databases.</p>
+        </br>
+        <p class="p-text">I have a passion for programming, and am constantly looking for ways to make my life easier
+          with software. I am seeking a full time role in either Full Stack or Back End development. I am a versatile leader who is team oriented with good communication skills and ready to be
+          apart of a goal-focused passionate team of developers. Along with programming, I enjoy watching sports, playing video games and spending time with family and friends.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-two container text-center" id="p3">
+    <div class="portfolio-top">
+      <h1 class="section-title">Portfolio</h1>
+    </div>
+
+    <div class="row">
+
+      <div class="col-md-6">
+        <a href="https://github.com/DanielMilGuelph/Fortnite-Ranker" class="thumbnail" target="_blank">
+          <img src="images/fortnitescreenshot.png" alt="Fortnite Ranker" height="180" width="360"></a>
+        <h3 class="portfolio-title">Fortnite Ranker</h3>
+        <p class="p-text">Player ranking yielding HTTP requests on real-time player statistics.</p>
+        </br>
+        <p class="p-text">Built with: Javascript, Node.js, HTML5, CSS3</p>
+      </div>
+
+      <div class="col-md-6">
+        <a href="https://fast-badlands-83881.herokuapp.com/" class="thumbnail" target="_blank">
+          <img src="images/friendscreenshot.png" alt="Friend Finder" height="180" width="360"></a>
+        <h3 class="portfolio-title">Friend Finder</h3>
+        <p class="p-text">This survey will match you with the user that has the most similar answers. This is calculated
+          with an algorithm to compare your answers with others that have completed the quiz, the least difference
+          yields a match.</p>
+        </br>
+        <p class="p-text">Built with: Javascript, Node.js, Express, HTML5</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <a href="https://warm-ridge-44987.herokuapp.com/" class="thumbnail" target="_blank">
+          <img src="images/nytscreenshot.png" alt="MERN Stack App" height="180" width="360"></a>
+        <h3 class="portfolio-title">New York Times Scraper</h3>
+        <p class="p-text">This full stack MERN app allows users to view and save articles retrieved from the NY Times
+          API.</p>
+        </br>
+        <p class="p-text">Built with: MongoDB, Express, React.js, Node.js</p>
+      </div>
+      <div class="col-md-6">
+        <a href="https://the-wall-of-kindness.herokuapp.com/" class="thumbnail" target="_blank">
+          <img src="images/kindnessscreenshot.png" alt="Wall of Kindness MERN" height="180" width="360"></a>
+        <h3 class="portfolio-title">Wall of Kindness</h3>
+        <p class="p-text">View "Wall's" created by other users in order to exhchange goods and services.</p>
+        </br>
+        <p class="p-text">Built with: MongoDB, Express, React.js, Node.js</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <a href="https://craigtheaudioanimator.com/" class="thumbnail" target="_blank">
+          <img src="images/aascreenshot.png" alt="The Audio Animator" height="180" width="360"></a>
+        <h3 class="portfolio-title">The Audio Animator</h3>
+        <p class="p-text">This voice actor will narrarate your content with the purpose of bringing your product to life.</p>
+        </br>
+        <p class="p-text">Built with: Javascript, jQuery, HTML5, CSS3, PHP</p>
+      </div>
+      <div class="col-md-6">
+        <a href="https://www.reliablesupportservices.com/" class="thumbnail" target="_blank">
+          <img src="images/reliablescreenshot.png" alt="Reliable Support Services" height="180" width="360"></a>
+        <h3 class="portfolio-title">Reliable Support Services</h3>
+        <p class="p-text">Personal Support & Home Cleaning Services brought to the GTA.</p>
+        </br>
+        <p class="p-text">Built with: Javascript, HTML5, CSS3, Bootstrap</p>
+      </div>
+    </div>
+
+
+
+  </div>
+
+  <div class="contact container" id="p4">
+    <h1 class="section-title">Contact</h1>
+
+    <div class="container">
+      <form id="my_form" onsubmit="submitForm(); return false;">
+        <p><input type="text" id="n" placeholder="Name" required></p>
+        <p><input type="text" id="e" placeholder="Email Address" type="email" required></p>
+        <textarea id="m" placeholder="Write Something.." rows="10" required></textarea>
+        <p><input id="mybtn" type="submit" value="Submit Form"> <span id="status"></span></p>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="row">
+      <div class="col-xs-4 text-center">
+        <h5 class="footer-menu">
+          <a href="#p1">Luke Ramsay</a>
+          <a href="#p2">About </a>
+          <a href="#p3">Portfolio </a>
+          <a href="#p4">Contact</a>
+        </h5>
+      </div>
+
+      <div class="col-xs-4 text-center">
+        <h5 class="footer-text">
+          Copyright © 2018 Luke Ramsay - All Rights Reserved.
+        </h5>
+      </div>
+
+      <div class="col-xs-4 text-center">
+        <button type="button" class="btn btn-default github social-media"><a href="https://github.com/ramsayyl"
+            class="fa fa-github" target="_blank"></a></button>
+        <button type="button" class="btn btn-default linkedin social-media"><a
+            href="https://www.linkedin.com/in/luke-ramsay-4a4559162/" class="fa fa-linkedin"
+            target="_blank"></a></button>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
